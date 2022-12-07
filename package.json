@@ -4,13 +4,12 @@
   "description": "",
   "main": "takeMultipleScreenshots.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node takeMultipleScreenshots.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^19.3.0",
-    "slugify": "^1.6.5"
+    "puppeteer": "^19.3.0"
   }
 }
