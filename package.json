@@ -1,0 +1,16 @@
+{
+  "name": "28203ee6fb5fa85657dd4160ff2ea5a5-ed978c41c1b0fad2a6bc256ea4effafa377a0e47",
+  "version": "1.0.0",
+  "description": "",
+  "main": "takeMultipleScreenshots.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^19.3.0",
+    "slugify": "^1.6.5"
+  }
+}
