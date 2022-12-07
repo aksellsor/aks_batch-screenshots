@@ -1,5 +1,5 @@
-const puppeteer = require("puppeteer");
-const pages = require("./webPages.json");
+const puppeteer = require('puppeteer');
+const pages = require('./webPages.json');
 
 async function takeMultipleScreenshots() {
   try {
@@ -7,10 +7,22 @@ async function takeMultipleScreenshots() {
 
     const page = await browser.newPage();
     let i = 0;
+
     for (const url of pages) {
+      let path = `screens/00${i++}_${url
+        .toString()
+        .split('/')
+        .join('-')
+        .replace(':', '')
+        .replace('https', '')
+        .replace('http', '')
+        .replace('--', '')}.jpeg`;
+
       await page.goto(url);
-      await page.screenshot({ path: `screens/00${i++}_${url.split('/').join("-").replace("https","").replace("http","").replace("--","")}.jpeg`, fullPage: true });
-      // console.log(`${name} - (${url})`);
+      await page.screenshot({
+        path: path,
+        fullPage: true,
+      });
     }
   } catch (err) {
     console.log(`Error: ${err.message}`);
