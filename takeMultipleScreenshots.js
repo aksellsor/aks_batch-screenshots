@@ -1,5 +1,4 @@
 const puppeteer = require("puppeteer");
-const slugify = require("slugify");
 const pages = require("./webPages.json");
 
 async function takeMultipleScreenshots() {
@@ -10,7 +9,7 @@ async function takeMultipleScreenshots() {
     let i = 0;
     for (const url of pages) {
       await page.goto(url);
-      await page.screenshot({ path: `screens/00${i++}_${slugify(url)}.jpeg`, fullPage: true });
+      await page.screenshot({ path: `screens/00${i++}_${url.split('/').join("-").replace("https","").replace("http","").replace("--","")}.jpeg`, fullPage: true });
       // console.log(`${name} - (${url})`);
     }
   } catch (err) {
