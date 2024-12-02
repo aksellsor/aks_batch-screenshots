@@ -1,3 +1,9 @@
-.set-all-components-to-display-none-and-use-this-div-to-create-a-symbol {
+#CybotCookiebotDialog {
   display: none !important;
+}
+* {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-delay: 0s !important;
 }
