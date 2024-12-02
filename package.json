@@ -1,15 +1,16 @@
 {
-  "name": "28203ee6fb5fa85657dd4160ff2ea5a5-ed978c41c1b0fad2a6bc256ea4effafa377a0e47",
+  "name": "aks_batch-screenshots-puppeteer",
   "version": "1.0.0",
-  "description": "",
-  "main": "takeMultipleScreenshots.js",
+  "main": "batch_screenshots.js",
   "scripts": {
-    "start": "node takeMultipleScreenshots.js"
+    "start": "node batch_screenshots.js",
+    "dev": "node batch_screenshots.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "puppeteer": "^19.3.0"
+    "puppeteer": "^23.9.0"
   }
 }
