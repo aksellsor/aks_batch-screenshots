@@ -18,10 +18,11 @@ npm run dev
 
 ## Additional configuration in [config.js](/config.js)
 
-| Constant                      | Value  | Type      | Description                                      |
-| ----------------------------- | ------ | --------- | ------------------------------------------------ |
-| `WAIT_FOR`                    | 1000   | `number`  | General wait time                                |
-| `WAIT_FOR_LAZYLOADED_CONTENT` | `true` | `boolean` | Waiti for lazy-loaded content (will take longer) |
-| `DELAY_BETWEEN_SCROLL`        | 100    | `number`  | Delay (ms) before each scroll                    |
-| `VIEWPORT_WIDTH`              | 1920   | `number`  | Width of the viewport                            |
-| `VIEWPORT_HEIGHT`             | 1080   | `number`  | Height of the viewport                           |
+| Constant                      | Value  | Type      | Description                                                                            |
+| ----------------------------- | ------ | --------- | -------------------------------------------------------------------------------------- |
+| `WAIT_FOR`                    | 1000   | `number`  | General wait time                                                                      |
+| `WAIT_FOR_LAZYLOADED_CONTENT` | `true` | `boolean` | Waiti for lazy-loaded content (will take longer)                                       |
+| `DELAY_BETWEEN_SCROLL`        | 100    | `number`  | Delay (ms) before each scroll                                                          |
+| `VIEWPORT_WIDTH`              | 1920   | `number`  | Width of the viewport                                                                  |
+| `VIEWPORT_HEIGHT`             | 1080   | `number`  | Height of the viewport                                                                 |
+| `REMOVE_POSITION_FIXED`       | `true` | `boolean` | Change all position fixed elements to absolute (to remove stuck elements on scrolling) |

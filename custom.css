@@ -1,4 +1,5 @@
-#CybotCookiebotDialog {
+#CybotCookiebotDialog,
+.set-all-components-to-display-none-and-use-this-div-to-create-a-symbol {
   display: none !important;
 }
 * {

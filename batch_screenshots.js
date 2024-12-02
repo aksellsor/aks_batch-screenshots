@@ -4,6 +4,7 @@ import {
   VIEWPORT_WIDTH,
   VIEWPORT_HEIGHT,
   DELAY_BETWEEN_SCROLL,
+  REMOVE_POSITION_FIXED,
 } from './config.js';
 
 import puppeteer from 'puppeteer';
@@ -70,6 +71,18 @@ const scrollPage = async (page, delay) => {
         // Trigger lazy-loaded content
         await scrollPage(page, DELAY_BETWEEN_SCROLL);
 
+        // Modify position for fixed elements if REMOVE_POSITION_FIXED is true
+        if (REMOVE_POSITION_FIXED) {
+          await page.evaluate(() => {
+            const fixedElements = Array.from(
+              document.querySelectorAll('*'),
+            ).filter((el) => window.getComputedStyle(el).position === 'fixed');
+            fixedElements.forEach((el) => {
+              el.style.position = 'absolute';
+            });
+          });
+        }
+
         // Ensure all lazy-loaded elements are visible
         await page.evaluate(() => {
           document
@@ -101,6 +114,7 @@ const scrollPage = async (page, delay) => {
 
       const filePath = path.join(folderPath, `${safeFileName}.jpeg`);
 
+      // Take a full-page screenshot
       await page.screenshot({
         path: filePath,
         type: 'jpeg',
